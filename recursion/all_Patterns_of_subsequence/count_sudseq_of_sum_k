@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std ;
+
+int printf(int ind  ,int s , int sum ,  int a[] , int n){
+    if (ind==n){
+        if (s==sum){ 
+        return 1;
+        }
+        else return 0;
+    }
+    s+=a[ind];
+    int l = printf(ind+1  , s ,sum , a , n);
+    s-=a[ind];
+    int r = printf(ind+1  , s ,sum , a , n);
+}
+
+int main (){
+    int a[]={3 , 1 , 2};
+    int n=3;
+    int sum = 2;
+    printf(0  ,0 , sum , a , n);
+    return 0;
+}
