@@ -1,5 +1,9 @@
 #include<iostream>
 #include<vector>
+#include<string>
+#include<algorithm>
+#include<cstring>
+
 using namespace std;
 // memoization approach
 class Solution {
